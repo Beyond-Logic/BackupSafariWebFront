@@ -1,38 +1,47 @@
-import React from 'react';
+import React from "react";
+import { Grid, GridColumn, Container } from "semantic-ui-react";
 import SideBar from "../sidebar/SideBar";
-import './AdminLayout.css';
+import "./AdminLayout.css";
 
 const AdminLayout = ({ children }) => {
-
   const menu = [
     {
       icon: "",
       name: "Dashboard",
       path: "/admin/dashboard",
-      exact: true
+      exact: true,
     },
     {
       icon: "",
       name: "Orders",
       path: "/admin/orders",
-      exact: true
+      exact: true,
     },
     {
       icon: "",
       name: "Products",
       path: "/admin/products",
-      exact: true
+      exact: true,
     },
-  ]
+  ];
 
   return (
-     <div className="dashboard-wrapper">
-       <SideBar menuItems={menu} />
-       <div>
-         { children }
-       </div>
-     </div>
+    <Container>
+      <Grid>
+        <GridColumn width="5">
+          <SideBar menuItems={menu} />
+        </GridColumn>
+        <GridColumn width="11">{children}</GridColumn>
+      </Grid>
+    </Container>
+
+    //  <div className="dashboard-wrapper">
+
+    //    <div>
+    //      { children }
+    //    </div>
+    //  </div>
   );
-}
+};
 
 export default AdminLayout;

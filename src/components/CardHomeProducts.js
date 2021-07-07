@@ -27,7 +27,7 @@ function CardProducts(props) {
                   price={"₦" + product.price}
                   path={`/cart/${id}`}
                   // favourtie="/favourite"
-                  favourtie={`/api/customer/favourite/${product.id}`}
+                  // favourtie={`/api/customer/favourite/${product.id}`}
                 />
               );
             })}
