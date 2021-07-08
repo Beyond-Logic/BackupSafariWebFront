@@ -1,55 +1,67 @@
-import React from 'react';
-import '../styles/Layout/_footer.scss';
+import React from "react";
+import "../styles/Layout/_footer.scss";
 // import './css/BackToTop.css'
-import '../styles/Components/_button.scss'
-import { Link } from 'react-router-dom';
-import { BackTop } from 'antd';
+import "../styles/Components/_button.scss";
+import { Link } from "react-router-dom";
+import { BackTop } from "antd";
 
 function Footer() {
   return (
-    <div className='footer-container'>
-      <div class='footer-links'>
-        <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
-          <img src="http://localhost:3000/images/navbar/Logo.png" alt="" />
+    <div className="footer-container">
+      <div class="footer-links">
+        <div className="footer-link-wrapper">
+          <div class="footer-link-items">
+            <img src="http://localhost:3000/images/navbar/Logo.png" alt="" />
+            <br />
+            <Link to="/admin/dashboard">Admin Portal</Link>
           </div>
         </div>
-        <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
-
-            <Link to='/sign-up'>About Us</Link>
-            <Link to='/'>Contact</Link>
-            <Link to='/'>Terms & Conditions</Link>
+        <div className="footer-link-wrapper">
+          <div class="footer-link-items">
+            <Link to="/sign-up">About Us</Link>
+            <Link to="/">Contact</Link>
+            <Link to="/">Terms & Conditions</Link>
           </div>
         </div>
-        <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Twitter</Link>
-            <Link to='/'>Instagram</Link>
+        <div className="footer-link-wrapper">
+          <div class="footer-link-items">
+            <Link to="/">Facebook</Link>
+            <Link to="/">Twitter</Link>
+            <Link to="/">Instagram</Link>
           </div>
         </div>
-        <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
-          <form className="">
-            <input className='footer-input' name='email' type='email' placeholder='Email Address'
+        <div className="footer-link-wrapper">
+          <div class="footer-link-items">
+            <form className="">
+              <input
+                className="footer-input"
+                name="email"
+                type="email"
+                placeholder="Email Address"
+              />
+              <input type="submit" value="OK" class="subscribe-button"></input>
+            </form>
+          </div>
+        </div>
+        <div className="footer-link-wrapper">
+          <div class="footer-link-items">
+            <p>
+              Lorem ipsum dolor sit. <br />
+              +23401234567890
+              <br />
+              safari@localhost.com
+            </p>
+          </div>
+        </div>
+        <BackTop>
+          <button className="backtotop" id="backtotop" title="Go to top">
+            <img
+              src="/images/backtotop-icon.svg"
+              alt="backtotop"
+              className="top-icon"
             />
-            <input type="submit" value="OK" class="subscribe-button"></input>
-          </form>
-          </div>
-        </div>
-        <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
-          <p>Lorem ipsum dolor sit. <br/>
-              +23401234567890<br />
-              safari@localhost.com 
-              </p>
-          </div>
-        </div>
-      < BackTop>
-        <button className ="backtotop" id="backtotop" title="Go to top"><img src="/images/backtotop-icon.svg" alt="backtotop" className="top-icon"/></button>
-      </BackTop>
-
+          </button>
+        </BackTop>
       </div>
     </div>
   );

@@ -45,6 +45,7 @@ function App() {
           <Route path="/admin/dashboard" component={AdminDashboard} />
           <Route path="/admin/orders" component={AdminOrders} />
           <Route path="/admin/products" component={AdminProducts} />
+          <Route path="/search?keyword=data" component={SearchPage} />
           <Route path="/product/:id" component={ProductPage} />
           <Route path="/product" component={ProductPage} />
           <Route path="/search" component={SearchPage} />
