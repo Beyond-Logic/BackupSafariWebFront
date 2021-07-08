@@ -1,7 +1,8 @@
 import React from "react";
-import { Grid, GridColumn, Container } from "semantic-ui-react";
+// import { Grid, GridColumn, Container } from "semantic-ui-react";
 import SideBar from "../sidebar/SideBar";
 import "./AdminLayout.css";
+import { Grid } from "semantic-ui-react";
 
 const AdminLayout = ({ children }) => {
   const menu = [
@@ -26,21 +27,34 @@ const AdminLayout = ({ children }) => {
   ];
 
   return (
-    <Container>
+    // <<<<<<< HEAD
+    //     <Container>
+    //       <Grid>
+    //         <GridColumn width="5">
+    //           <SideBar menuItems={menu} />
+    //         </GridColumn>
+    //         <GridColumn width="11">{children}</GridColumn>
+    //       </Grid>
+    //     </Container>
+
+    //     //  <div className="dashboard-wrapper">
+
+    //     //    <div>
+    //     //      { children }
+    //     //    </div>
+    //     //  </div>
+    // =======
+    <div className="dashboard-wrapper">
       <Grid>
-        <GridColumn width="5">
+        <Grid.Column mobile={16} tablet={8} computer={5}>
           <SideBar menuItems={menu} />
-        </GridColumn>
-        <GridColumn width="11">{children}</GridColumn>
+        </Grid.Column>
+        <Grid.Column mobile={16} tablet={8} computer={11}>
+          {children}
+        </Grid.Column>
       </Grid>
-    </Container>
-
-    //  <div className="dashboard-wrapper">
-
-    //    <div>
-    //      { children }
-    //    </div>
-    //  </div>
+    </div>
+    // >>>>>>> develop
   );
 };
 
